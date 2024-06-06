@@ -1,4 +1,4 @@
-body{
+body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -6,6 +6,9 @@ body{
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+}
+h2{
+    font-weight: 500;
 }
 
 #app {
@@ -15,6 +18,12 @@ body{
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+#question-container,
+#result-container {
+    text-align: center;
+    animation: fadeIn 1s;
 }
 
 #answers button {
@@ -28,15 +37,12 @@ body{
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease; 
 }
 
 #answers button:hover {
     background-color: #0056b3;
-}
-
-#result-container {
-    text-align: center;
+    transform: scale(1.1); 
 }
 
 @keyframes fadeIn {
@@ -46,8 +52,4 @@ body{
     to {
         opacity: 1;
     }
-}
-
-#quiz-container {
-    animation: fadeIn 1s;
 }
