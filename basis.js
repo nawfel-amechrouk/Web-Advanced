@@ -9,7 +9,6 @@ let quizData = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
-
 const fetchQuizData = async () => {
     try {
         const response = await fetch('https://opentdb.com/api.php?amount=10');
@@ -48,10 +47,21 @@ const selectAnswer = (selectedAnswer) => {
     } else {
         showResult();
     }
-}; 
+};
 
 const showResult = () => {
     resultText.innerText = `Je hebt ${score} van de ${quizData.length} vragen goed beantwoord.`;
     questionContainer.style.display = 'none';
     resultContainer.style.display = 'block';
 };
+
+restartBtn.addEventListener('click', () => {
+    currentQuestionIndex = 0;
+    score = 0;
+    resultContainer.style.display = 'none';
+    questionContainer.style.display = 'block';
+    fetchQuizData();
+});
+
+// Initialize the app
+fetchQuizData();

@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-h2{
+h2 {
     font-weight: 500;
 }
 
@@ -37,12 +37,12 @@ h2{
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 #answers button:hover {
     background-color: #0056b3;
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 @keyframes fadeIn {
@@ -54,21 +54,9 @@ h2{
     }
 }
 
-nav {
-    margin: 1em 0;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 1em;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-main{
+main {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100%;
 }
