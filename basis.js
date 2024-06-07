@@ -36,3 +36,16 @@ const loadQuestion = () => {
         answersContainer.appendChild(button);
     });
 };
+
+const selectAnswer = (selectedAnswer) => {
+    const { correct } = quizData[currentQuestionIndex];
+    if (selectedAnswer === correct) {
+        score++;
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizData.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+};
