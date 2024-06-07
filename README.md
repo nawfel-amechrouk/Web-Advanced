@@ -78,3 +78,10 @@ CSS animatie wordt gebruikt voor het fade-in effect bij het laden van de quizvra
 ## Gebruiken van een flexbox of CSS grid
 
 Flexbox wordt gebruikt om de layout van de pagina te centreren en de elementen netjes uit te lijnen.
+
+## Extra bronnen:
+
+- [Javascript](https://www.youtube.com/watch?v=hKB-YGF14SY&ab_channel=CodeWithHarry)
+- [Informatie over Javascript](https://www.w3schools.com/js/)
+- [Basis css](https://www.youtube.com/watch?v=avw21xGxflU&ab_channel=front-end)
+- [Hulp voor het oplossen van paginafouten](https://chatgpt.com/share/863d8a1a-138c-4f76-abc3-cc71013e8d13)

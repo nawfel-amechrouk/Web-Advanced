@@ -17,7 +17,7 @@ const fetchQuizData = async () => {
         quizData = data.results.map(item => ({
             question: item.question,
             answers: [...item.incorrect_answers, item.correct_answer].sort(() => Math.random() - 0.5),
-            correct: item.correct_answers
+            correct: item.correct_answer
         }));
         loadQuestion();
     } catch (error) {
