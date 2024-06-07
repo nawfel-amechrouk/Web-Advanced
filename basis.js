@@ -9,7 +9,7 @@ let quizData = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Fetch quiz data from API
+
 const fetchQuizData = async () => {
     try {
         const response = await fetch('https://opentdb.com/api.php?amount=10');
@@ -23,4 +23,16 @@ const fetchQuizData = async () => {
     } catch (error) {
         console.error("Error fetching data", error);
     }
+};
+
+const loadQuestion = () => {
+    const { question, answers } = quizData[currentQuestionIndex];
+    document.getElementById('question').innerHTML = question;
+    answersContainer.innerHTML = '';
+    answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer;
+        button.addEventListener('click', () => selectAnswer(answer));
+        answersContainer.appendChild(button);
+    });
 };
