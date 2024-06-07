@@ -48,4 +48,10 @@ const selectAnswer = (selectedAnswer) => {
     } else {
         showResult();
     }
+}; 
+
+const showResult = () => {
+    resultText.innerText = `Je hebt ${score} van de ${quizData.length} vragen goed beantwoord.`;
+    questionContainer.style.display = 'none';
+    resultContainer.style.display = 'block';
 };
